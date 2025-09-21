@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Counter</title>
+  <style>
+    body { display:flex; flex-direction:column; justify-content:center; align-items:center; height:100vh; font-family:sans-serif; }
+    h1 { font-size:60px; }
+    button { margin:5px; padding:10px 20px; font-size:18px; }
+  </style>
+</head>
+<body>
+  <h1 id="count">0</h1>
+  <button onclick="increase()">➕ Increase</button>
+  <button onclick="decrease()">➖ Decrease</button>
+  <button onclick="reset()">🔄 Reset</button>
+  <script>
+    let count = 0;
+    function increase(){ count++; document.getElementById("count").innerText = count; }
+    function decrease(){ count--; document.getElementById("count").innerText = count; }
+    function reset(){ count = 0; document.getElementById("count").innerText = count; }
+  </script>
+</body>
+</html>
