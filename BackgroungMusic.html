@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Player</title>
+  <style>
+    body { display:flex; justify-content:center; align-items:center; height:100vh; background:#222; color:white; flex-direction:column; }
+    button { padding:10px 20px; font-size:18px; margin-top:10px; }
+  </style>
+</head>
+<body>
+  <h2>Simple Music Player</h2>
+  <button onclick="toggleMusic()">Play / Pause</button>
+  <audio id="player" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+  <script>
+    function toggleMusic(){
+      const player = document.getElementById("player");
+      if(player.paused){ player.play(); }
+      else{ player.pause(); }
+    }
+  </script>
+</body>
+</html>
