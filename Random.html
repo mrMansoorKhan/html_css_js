@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Quotes</title>
+  <style>
+    body { display:flex; justify-content:center; align-items:center; height:100vh; font-family:sans-serif; background:#eef; }
+    #box { background:#fff; padding:20px; border-radius:10px; text-align:center; width:300px; }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <p id="quote">Click for a quote!</p>
+    <button onclick="newQuote()">New Quote</button>
+  </div>
+  <script>
+    const quotes = [
+      "Stay hungry, stay foolish.",
+      "Code is like humor. When you have to explain it, it’s bad.",
+      "Simplicity is the soul of efficiency.",
+      "Talk is cheap. Show me the code."
+    ];
+    function newQuote(){
+      const random = Math.floor(Math.random() * quotes.length);
+      document.getElementById("quote").innerText = quotes[random];
+    }
+  </script>
+</body>
+</html>
